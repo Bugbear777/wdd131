@@ -27,8 +27,17 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 1rem;
     margin-top: 0.5rem;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes list horizontal */
+    justify-content: center; /* Centers the list */
+    gap: 1rem; /* Spacing between items */
 }
 
 nav a {
