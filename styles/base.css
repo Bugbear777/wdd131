@@ -1,5 +1,6 @@
 /* Apply Grid to the body for layout structure */
 body {
+    font-family: 'Roboto', Arial, sans-serif;
     display: grid;
     grid-template-areas:
         "header header"
