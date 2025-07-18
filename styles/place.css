@@ -1,0 +1,126 @@
+/* GLOBAL VARIABLES */
+:root {
+  --color-green: #006847;
+  --color-white: #ffffff;
+  --color-red: #d21033;
+  --color-text: #000000;
+  --color-accent: #f8f8f8;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+    padding: 4px;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Floating overlay boxes */
+.data-overlay,
+.weather-overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* Positioning for large view */
+.data-overlay {
+  top: 20%;
+  left: 5%;
+}
+
+.weather-overlay {
+  bottom: 15%;
+  right: 5%;
+}
+
+/* Section styling */
+section h2 {
+  border-bottom: 2px solid var(--color-green);
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+/* Weather icon as pseudo-element in large view */
+@media (min-width: 600px) {
+  .weather-heading::after {
+    content: '';
+    display: inline-block;
+    background-image: url('../images/cloudy.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 600px) {
+  .hero {
+    display: block;
+    position: relative;
+  }
+
+  .data-overlay,
+  .weather-overlay {
+    position: static;
+    width: auto;
+    margin: 0.5rem;
+  }
+
+  .hero picture img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
+

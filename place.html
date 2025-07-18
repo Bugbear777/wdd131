@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexico</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Joseph Marlow | Explore the basics of semantic HTML, CSS layouts, and responsive design.">
+    <meta name="author" content="Joseph Marlow">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mexico</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 1000px)" srcset="images/mexican_flag_1500x750.webp">
+                <source media="(max-width: 500px)" srcset="images/mexican_flag_1000x500.webp">
+                <img src="images/mexican_flag_500x250.webp" alt="mexican national flag" width="1500" height="750">
+            </picture>
+                <section class="data-overlay">
+                    <h2>Data</h2>
+                    <p><b>Area:</b> 1,964,375 sq km</p>
+                    <p><b>Population:</b> 129 million</p>
+                    <p><b>Capital:</b> La Ciudad de Mexico</p>
+                    <p><b>Languages:</b> Spanish</p>
+                    <p><b>Currency:</b> Mexican Peso</p>
+                    <p><b>Timezone:</b> UTC-8,-7,-6,-5</p>
+                    <p><b>Calling Code:</b> +52</p>
+                    <p><b>Internet TLD:</b> .mx</p>
+                </section>
+                <section class="weather-overlay">
+                    <h2 class="weather-heading">Weather</h2>
+                    <p><b>Temperature:</b> 20°C</p>
+                    <p><b>Conditions:</b> Cloudy</p>
+                    <p><b>Wind:</b> 3km/h</p>
+                    <p id="windChill"><b>Wind Chill:</b> N/A</p>
+                </section>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Joseph Marlow | United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
