@@ -1,0 +1,48 @@
+/* Root-level variables for global styling */
+:root {
+  --primary-color: #A63A50;       /* Red Rock Accent */
+  --background-color: #FAF3E0;    /* Soft Desert Sand */
+  --text-color: #333333;          /* Default text color */
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'EB Garamond', serif;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  --border-radius: 4px;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base reset and defaults */
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: var(--spacing-medium);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+}
+
+ul {
+  padding-left: var(--spacing-large);
+}
+
+code {
+  background: #f0f0f0;
+  padding: 0.2em 0.5em;
+  border-radius: var(--border-radius);
+}
+
+.wireframe {
+  border: 2px dashed #ccc;
+  padding: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+  background-color: #fff;
+}
