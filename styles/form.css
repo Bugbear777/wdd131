@@ -1,0 +1,27 @@
+body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    fieldset {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .rating-stars label {
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      display: block;
+    }
