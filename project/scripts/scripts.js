@@ -4,19 +4,31 @@ document.getElementById("currentyear").textContent = new Date().getFullYear();
 // Dynamically display last modified date
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 
-//gallery scripts
-// Dynamically display the current year
+// Simple Image Carousel
 
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll("img[loading='lazy']");
+const images = document.querySelectorAll('.carousel-img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let current = 0;
 
-  images.forEach(img => {
-    img.addEventListener("load", () => {
-      img.classList.add("loaded");
-    });
-  });
-  
-  // Set current year and last modified in the footer
-  document.getElementById("currentyear").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
-});
+function showImage(index) {
+  images.forEach(img => img.classList.remove('active'));
+  images[index].classList.add('active');
+}
+
+function nextImage() {
+  current = (current + 1) % images.length;
+  showImage(current);
+}
+
+function prevImage() {
+  current = (current - 1 + images.length) % images.length;
+  showImage(current);
+}
+
+nextBtn.addEventListener('click', nextImage);
+prevBtn.addEventListener('click', prevImage);
+
+// Auto-cycle every 5 seconds
+setInterval(nextImage, 5000);
+
