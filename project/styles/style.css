@@ -201,3 +201,42 @@ section .ceo p {
   margin: 0; 
   line-height: 1.5;
 }
+
+/*Gallery Styling*/
+/* Gallery container */
+main .gallery {
+  content-visibility: auto; 
+  contain-intrinsic-size: 800px; 
+}
+
+/* Base image styles */
+main .gallery img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;                
+  transition: opacity 600ms ease; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  /* optional: define aspect-ratio if you can’t set width/height attributes */
+  /* aspect-ratio: 3 / 2; */
+}
+
+/* Only fade in AFTER load */
+main .gallery img.loaded {
+  opacity: 1;
+}
+
+/* During the transition, hint to the browser */
+main .gallery img:not(.loaded) {
+  will-change: opacity;
+}
+
+/* Respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  main .gallery img {
+    transition: none;
+    opacity: 1;
+  }
+}
