@@ -183,3 +183,21 @@ figure img {
   height: auto;
   border-radius: 0.25rem;
 }
+
+/*about styling*/
+section .ceo {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem; 
+}
+section .ceo img {
+  flex-shrink: 0; 
+  width: 200px; 
+  height: auto;
+  border-radius: 4px; 
+}
+
+section .ceo p {
+  margin: 0; 
+  line-height: 1.5;
+}
