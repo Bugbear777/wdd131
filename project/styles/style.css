@@ -240,3 +240,55 @@ main .gallery img:not(.loaded) {
     opacity: 1;
   }
 }
+
+/*Contact Us*/
+.form {
+  max-width: 600px;
+  margin: 0 auto; /* center on page */
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form legend {
+  font-weight: 600;
+  padding: 0 .25rem;
+}
+
+.form label {
+  display: block;
+  margin-top: .75rem;
+}
+
+.form input,
+.form select,
+.form button {
+  width: 100%;
+  max-width: 480px;
+  padding: .5rem;
+  margin-top: .25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form button:hover {
+  background: var(--highlight-color);
+}
+

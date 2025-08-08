@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book with Us | Red Rock Retreat</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Joseph Marlow | Explore the basics of semantic HTML, CSS layouts, and responsive design.">
+    <meta name="author" content="Joseph Marlow">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span id="course-title"><b>Red Rock Retreat</b></span>
+        <nav>
+            <ul>
+                <li><a href="/project/index.html">Home</a></li>
+                <li><a href="/project/about.html">About Us</a></li>
+                <li><a href="/project/gallery.html">Gallery</a></li>
+                <li><a href="/project/todo.html">Things To Do</a></li>
+                <li><a href="/project/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <h2>Book with Us</h2>
+
+        <div class="form">
+            <form id="bookingForm" novalidate>
+                <fieldset>
+                <legend>Activity</legend>
+                <label for="activity">Activity Name</label>
+                <select id="activity" name="activity" required>
+                    <option value="" disabled selected>Select an activity…</option>
+                </select>
+                </fieldset>
+
+                <fieldset>
+                <legend>Details</legend>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="party">Party Size</label>
+                <input type="number" id="party" name="party" min="1" max="20" value="2" required>
+                </fieldset>
+
+                <fieldset>
+                <legend>Contact</legend>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                </fieldset>
+
+                <button type="submit">Request Booking</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Joseph Marlow | United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
